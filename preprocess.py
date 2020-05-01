@@ -1,11 +1,18 @@
+import os
+
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image, ImageEnhance
+import os
+
 
 image_name = "nostra.jpg"
-image_source = "E:\\ROB\\Desktop\\PycharmWorkspace\\segm\\imgs\\"+image_name
-no_hair_img = "E:\\ROB\\Desktop\\PycharmWorkspace\\segm\\imgs\\preprocessed\\prep"
+
+
+project_root = os.path.dirname(os.path.dirname(__file__)) + "/MelanomaDetection/"
+image_source = project_root+ "imgs/"+image_name
+no_hair_img = project_root+ "imgs/preprocessed/prep"
 save_name = no_hair_img+image_name
 
 

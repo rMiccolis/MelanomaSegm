@@ -8,12 +8,18 @@ from skimage import measure
 import cv2
 import imutils
 from scipy.spatial import distance
+import os
 
-print("Input image read")
+
 image_name = "nostra.jpg"
-image_source = "E:\\ROB\\Desktop\\PycharmWorkspace\\segm\\imgs\\preprocessed\\prep"+image_name
-image_seg = "E:\\ROB\\Desktop\\PycharmWorkspace\\segm\\imgs\\segmented\\seg"+image_name
+
+
+project_root = os.path.dirname(os.path.dirname(__file__)) + "/MelanomaDetection/"
+image_source = project_root + "imgs/preprocessed/prep"+image_name
+image_seg = project_root + "imgs/segmented/seg"+image_name
 thresholded_image = "thresholded.jpg"
+print("Input image read")
+
 
 image1 = cv2.imread(image_source, cv2.IMREAD_GRAYSCALE)
 

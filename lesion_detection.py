@@ -17,13 +17,14 @@ from itertools import cycle
 from scipy.ndimage import binary_dilation, binary_erosion, \
                         gaussian_filter, gaussian_gradient_magnitude
 
-
 image_name = "nostra.jpg"
-image_source = "E:\\ROB\\Desktop\\PycharmWorkspace\\segm\\imgs\\"+image_name
-image_seg = "E:\\ROB\\Desktop\\PycharmWorkspace\\segm\\imgs\\segmented\\"+"seg"+image_name
-save_path_not_cropped = "E:\\ROB\\Desktop\\PycharmWorkspace\\segm\\imgs\\cropped\\notcropped"+image_name
-save_path_cropped = "E:\\ROB\\Desktop\\PycharmWorkspace\\segm\\imgs\\cropped\\cropped"+image_name
-save_path_lesion = "E:\\ROB\\Desktop\\PycharmWorkspace\\segm\\imgs\\cropped\\lesion\\"+image_name
+
+project_root = os.path.dirname(os.path.dirname(__file__)) + "/MelanomaDetection/"
+image_source = project_root+ "imgs/"+image_name
+image_seg = project_root+ "imgs/segmented/seg"+image_name
+save_path_not_cropped = project_root+ "imgs/cropped/notcropped"+image_name
+save_path_cropped = project_root+ "imgs/cropped/"+image_name
+save_path_lesion = project_root+ "imgs/cropped/lesion/"+image_name
 
 
 
